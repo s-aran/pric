@@ -1,4 +1,18 @@
 {
 	"$schema": "https://inlang.com/schema/inlang-message-format",
-	"hello_world": "Hello, {name} from ja!"
+	"hello_world": "Hello, {name} from ja!",
+	"choose_background_image": "背景画像...",
+	"choose_good_screenshot_image": "良い例のスクショ...",
+	"choose_bad_screenshot_image": "悪い例のスクショ...",
+	"choose_avator_image": "アバター...",
+	"pattern_legend": "パターン",
+	"good_and_bad_example": "良い例と悪い例",
+	"good_only_exmaple": "良い例のみ",
+	"set_avator_label": "アバターを追加",
+	"title_text_label": "タイトルテキスト",
+	"good_text_label": "良い",
+	"bad_text_label": "悪い",
+	"textarea_placeholder": "ここにテキストを入力",
+	"good_text_placeholder": "良い例の説明",
+	"bad_text_placeholder": "悪い例の説明"
 }
