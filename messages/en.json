@@ -1,0 +1,18 @@
+{
+	"$schema": "https://inlang.com/schema/inlang-message-format",
+	"hello_world": "Hello, {name} from en!",
+	"choose_background_image": "Choose background image...",
+	"choose_good_screenshot_image": "Choose good screenshot...",
+	"choose_bad_screenshot_image": "Choose bad screenshot...",
+	"choose_avator_image": "Choose avator...",
+	"pattern_legend": "Patterns",
+	"good_and_bad_example": "Good and Bad example",
+	"good_only_exmaple": "Good only example",
+	"set_avator_label": "Set avator",
+	"title_text_label": "Title",
+	"good_text_label": "Good",
+	"bad_text_label": "Bad",
+	"textarea_placeholder": "Please enter your text here",
+	"good_text_placeholder": "Summary for good",
+	"bad_text_placeholder": "Summary for bad"
+}
