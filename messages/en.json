@@ -9,9 +9,10 @@
 	"good_and_bad_example": "Good and Bad example",
 	"good_only_exmaple": "Good only example",
 	"set_avator_label": "Set avator",
-	"title_text_label": "Title",
-	"good_text_label": "Good",
-	"bad_text_label": "Bad",
+	"title_text_label": "Header text",
+	"good_text_label": "Good example",
+	"bad_text_label": "Bad example",
+	"choose_font": "Font",
 	"textarea_placeholder": "Please enter your text here",
 	"good_text_placeholder": "Summary for good",
 	"bad_text_placeholder": "Summary for bad"

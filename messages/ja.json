@@ -9,9 +9,10 @@
 	"good_and_bad_example": "良い例と悪い例",
 	"good_only_exmaple": "良い例のみ",
 	"set_avator_label": "アバターを追加",
-	"title_text_label": "タイトルテキスト",
-	"good_text_label": "良い",
-	"bad_text_label": "悪い",
+	"title_text_label": "ヘッダーテキスト",
+	"good_text_label": "良い例",
+	"bad_text_label": "悪い例",
+	"choose_font": "フォント",
 	"textarea_placeholder": "ここにテキストを入力",
 	"good_text_placeholder": "良い例の説明",
 	"bad_text_placeholder": "悪い例の説明"
