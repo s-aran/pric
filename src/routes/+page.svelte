@@ -399,7 +399,7 @@
     </div>
 </fieldset>
 
-<div>
+<div class="p-4">
     <label for="choose_background">{m.choose_background_image()}</label>
     <input
         type="file"
@@ -410,7 +410,7 @@
     />
 </div>
 
-<div>
+<div class="p-4">
     <label for="choose_good_screenshot"
         >{m.choose_good_screenshot_image()}</label
     >
@@ -424,7 +424,7 @@
 </div>
 
 {#if pattern === Patterns.GoodAndBad}
-    <div>
+    <div class="p-4">
         <label for="choose_bad_screenshot"
             >{m.choose_bad_screenshot_image()}</label
         >
@@ -439,7 +439,7 @@
 {/if}
 
 {#if enable_avator}
-    <div>
+    <div class="p-4">
         <label for="choose_avator">{m.choose_avator_image()}</label>
         <input
             type="file"
@@ -451,75 +451,86 @@
     </div>
 {/if}
 
-<div>
-    <label for="title_text" class="">{m.title_text_label()}</label>
-    <textarea
-        class="w-full p-2 border rounded"
-        placeholder={m.textarea_placeholder({})}
-        id="title_text"
-        on:input={handleTitleTextInput}
-        bind:value={titleText}
-    ></textarea>
+<div class="flex space-x-2">
+    <div class="p-4">
+        <label for="title_text">{m.title_text_label()}</label>
+        <textarea
+            class="p-2 border rounded w-[40rem] h-[5rem]"
+            placeholder={m.textarea_placeholder({})}
+            id="title_text"
+            on:input={handleTitleTextInput}
+            bind:value={titleText}
+        ></textarea>
+    </div>
 
-    <FontList
-        defaultFontIndex={selectedTitleFontIndex}
-        defaultWeightIndex={selectedTitleWeightIndex}
-        onFontListChangeCallback={(index) => {
-            selectedTitleFontIndex = index;
-            draw();
-        }}
-        onWeightListChangeCallback={(index) => {
-            selectedTitleWeightIndex = index;
-            draw();
-        }}
-    />
+    <div class="p-4">
+        <label>{m.choose_font()}</label>
+
+        <FontList
+            defaultFontIndex={selectedTitleFontIndex}
+            defaultWeightIndex={selectedTitleWeightIndex}
+            onFontListChangeCallback={(index) => {
+                selectedTitleFontIndex = index;
+                draw();
+            }}
+            onWeightListChangeCallback={(index) => {
+                selectedTitleWeightIndex = index;
+                draw();
+            }}
+        />
+    </div>
 </div>
 
-<div class="my-4">
-    <label for="good_text" class="block font-medium mb-1"
-        >{m.good_text_label()}</label
-    >
-    <input
-        type="text"
-        placeholder={m.good_text_placeholder()}
-        id="good_text"
-        on:input={handleGoodTextInput}
-        bind:value={goodText}
-    />
-</div>
-
-{#if pattern === Patterns.GoodAndBad}
-    <div class="my-4">
-        <label for="bad_text" class="block font-medium mb-1"
-            >{m.bad_text_label()}</label
+<div class="flex space-x-2">
+    <div class="p-4">
+        <label for="good_text" class="block font-medium mb-1"
+            >{m.good_text_label()}</label
         >
         <input
             type="text"
-            placeholder={m.bad_text_placeholder()}
-            id="bad_text"
-            on:input={handleBadTextInput}
-            bind:value={badText}
+            placeholder={m.good_text_placeholder()}
+            id="good_text"
+            on:input={handleGoodTextInput}
+            bind:value={goodText}
         />
     </div>
-{/if}
 
-<FontList
-    defaultFontIndex={selectedGoodFontIndex}
-    defaultWeightIndex={selectedGoodWeightIndex}
-    onFontListChangeCallback={(index) => {
-        selectedGoodFontIndex = index;
-        selectedBadFontIndex = index;
-        draw();
-    }}
-    onWeightListChangeCallback={(index) => {
-        selectedGoodWeightIndex = index;
-        selectedBadWeightIndex = index;
-        draw();
-    }}
-/>
+    {#if pattern === Patterns.GoodAndBad}
+        <div class="p-4">
+            <label for="bad_text" class="block font-medium mb-1"
+                >{m.bad_text_label()}</label
+            >
+            <input
+                type="text"
+                placeholder={m.bad_text_placeholder()}
+                id="bad_text"
+                on:input={handleBadTextInput}
+                bind:value={badText}
+            />
+        </div>
+    {/if}
+
+    <div class="p-4">
+        <label>{m.choose_font()}</label>
+        <FontList
+            defaultFontIndex={selectedGoodFontIndex}
+            defaultWeightIndex={selectedGoodWeightIndex}
+            onFontListChangeCallback={(index) => {
+                selectedGoodFontIndex = index;
+                selectedBadFontIndex = index;
+                draw();
+            }}
+            onWeightListChangeCallback={(index) => {
+                selectedGoodWeightIndex = index;
+                selectedBadWeightIndex = index;
+                draw();
+            }}
+        />
+    </div>
+</div>
 
 <canvas
-    class="border border-darkgray bg-[#dbc9ad] rounded w-[1280px] h-[791px]"
+    class="p-4 border border-darkgray bg-[#dbc9ad] rounded w-[1280px] h-[791px]"
     bind:this={canvas}
 ></canvas>
 
