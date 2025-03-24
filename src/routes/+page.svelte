@@ -455,7 +455,7 @@
     <div class="p-4">
         <label for="title_text">{m.title_text_label()}</label>
         <textarea
-            class="p-2 border rounded w-[40rem] h-[5rem]"
+            class="p-2 border rounded w-[40rem] h-[5rem] dark:text-black"
             placeholder={m.textarea_placeholder({})}
             id="title_text"
             on:input={handleTitleTextInput}
@@ -488,6 +488,7 @@
         >
         <input
             type="text"
+            class="dark:text-gray-900"
             placeholder={m.good_text_placeholder()}
             id="good_text"
             on:input={handleGoodTextInput}
@@ -502,6 +503,7 @@
             >
             <input
                 type="text"
+                class="dark:text-gray-900"
                 placeholder={m.bad_text_placeholder()}
                 id="bad_text"
                 on:input={handleBadTextInput}
@@ -513,6 +515,7 @@
     <div class="p-4">
         <label>{m.choose_font()}</label>
         <FontList
+            class="dark:text-gray-900"
             defaultFontIndex={selectedGoodFontIndex}
             defaultWeightIndex={selectedGoodWeightIndex}
             onFontListChangeCallback={(index) => {

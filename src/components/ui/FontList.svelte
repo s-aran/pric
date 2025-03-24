@@ -68,20 +68,20 @@
   <select
     bind:value={selectedFontIndex}
     on:change={onFontListChange}
-    class="border rounded"
+    class="border rounded dark:text-gray-900"
   >
     {#each fonts as font, index}
-      <option value={index}>{font.name}</option>
+      <option class="dark:text-gray-700" value={index}>{font.name}</option>
     {/each}
   </select>
 
   <select
     bind:value={selectedWeightIndex}
     on:change={onWeightListChange}
-    class="border rounded"
+    class="border rounded dark:text-gray-900"
   >
     {#each availableWeights as weight, index}
-      <option value={index}>{weight}</option>
+      <option class="dark:text-gray-700" value={index}>{weight}</option>
     {/each}
   </select>
 </div>
